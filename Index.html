@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Layers 1st Example</title>
+    <link rel="stylesheet" href="./v9.0.0-package/ol.css">
+    <link rel="stylesheet" href="./Style.css">
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="grid-1">
+            <div class="sidebar">
+                <h2>Base Layer</h2>
+                <input type="radio" name="baseLayerRadioButton" value="OSMStandard" checked>OSM Standard<br>
+                <input type="radio" name="baseLayerRadioButton" value="OSMHumanitarian">OSM Humanitarian<br>
+                <input type="radio" name="baseLayerRadioButton" value="BingMaps">Bing Maps<br>
+                <input type="radio" name="baseLayerRadioButton" value="StadiaMapsTerrain">Stadia-Stamen Terrain<br>
+                <input type="radio" name="baseLayerRadioButton" value="StadiaMapsWaterColor">Stadia-Stamen
+                Watercolor<br>
+                <h2>Thematic vector layers</h2>
+                <input type="checkbox" name="vectorlayercheckbox" value="vectorGJSON1" checked>GeoJSON_Buildings<br>
+                <input type="checkbox" name="vectorlayercheckbox" value="vectorGJSON2" checked>GeoJSON_Roads<br>
+                <input type="checkbox" name="vectorlayercheckbox" value="vectorGJSON3" checked>GeoJSON_Junctions<br>
+
+            </div>
+        </div>
+        <div class="grid-2">
+            <div id="js-map" class="map"></div>
+        </div>
+    </div>
+    <div id="popup-container">
+        <p id="popup-coordinates"></p>
+    </div>
+    <div id="js-map" class="map"></div>
+
+    <div class="overlay-container">
+        <span class="overlay-text" id="feature-name"></span><br>
+        <span class="overlay-text" id="feature-info"></span><br>
+    </div>
+    <script src="./v9.0.0-package/dist/ol.js"></script>
+    <script src="./Main.js"></script>
+</body>
+
+</html>
